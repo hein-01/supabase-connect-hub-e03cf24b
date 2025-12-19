@@ -35,9 +35,9 @@ export function Footer() {
               © 2026 AISumo.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">Twitter</a>
-              <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">LinkedIn</a>
-              <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">GitHub</a>
+              <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">X.com</a>
+              <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">Tiktok</a>
+              <a href="#" className="text-sm text-white/40 hover:text-white transition-colors">Youtube</a>
             </div>
           </div>
         </div>
