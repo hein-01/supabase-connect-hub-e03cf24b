@@ -6,13 +6,13 @@ export function Footer() {
       <div className="container-main py-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           {/* Brand */}
-          <div>
-            <div className="flex items-center mb-4">
+          <div className="text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start mb-4">
               <span className="text-2xl font-bold gradient-text">AI</span>
               <span className="text-2xl font-bold text-white">Sumo</span>
             </div>
             <p className="text-white/60 text-sm mb-4 max-w-md">
-              The world's largest AI tools directory. Discover, compare, and use the best AI tools for your needs.
+              Explore over 500 hand-picked, high-utility AI tools. AiSumo connects users with daily free-tier recommendations while providing developers a free platform to showcase their products to a growing audience.
             </p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-white/60">
               <span>English</span>
