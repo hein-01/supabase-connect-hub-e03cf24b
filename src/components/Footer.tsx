@@ -24,6 +24,8 @@ export function Footer() {
               <span>မြန်မာဘာသာ</span>
               <span>Tiếng Việt</span>
               <span>Bahasa Indonesia</span>
+              <span>Bahasa Melayu</span>
+              <span>Tagalog</span>
             </div>
           </div>
         </div>
