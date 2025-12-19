@@ -96,11 +96,14 @@ export function AIForEveryoneSection() {
           </a>
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {categories.map(cat => <button key={cat.id} onClick={() => setActiveCategory(cat.id)} className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${activeCategory === cat.id ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80 border border-border'}`}>
-              {cat.label}
-            </button>)}
+        {/* Category Tabs - Horizontal scrollable */}
+        <div className="overflow-x-auto scrollbar-hide mb-6 -mx-4 px-4 cursor-grab active:cursor-grabbing"
+             style={{ WebkitOverflowScrolling: 'touch' }}>
+          <div className="flex gap-2 w-max">
+            {categories.map(cat => <button key={cat.id} onClick={() => setActiveCategory(cat.id)} className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${activeCategory === cat.id ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80 border border-border'}`}>
+                {cat.label}
+              </button>)}
+          </div>
         </div>
 
         <Carousel opts={{
