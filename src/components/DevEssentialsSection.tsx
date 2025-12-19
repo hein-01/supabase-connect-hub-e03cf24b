@@ -120,17 +120,12 @@ export function DevEssentialsSection() {
               {devTools.map(tool => (
                 <CarouselItem key={tool.id} className="pl-4 basis-[42%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
                   <Link to={`/tool/${tool.slug}`} className="group block rounded-xl p-3 sm:p-4 bg-card border border-border shadow-card hover:shadow-md transition-shadow h-full">
-                    <div className="flex items-start gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                      <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl ${tool.iconBg} flex items-center justify-center text-sm sm:text-base flex-shrink-0`}>
-                        {tool.icon}
-                      </div>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 min-w-0 flex-1">
+                    <div className="flex items-start justify-between mb-2 sm:mb-3">
+                      <div className="flex items-center gap-1.5 sm:gap-2">
+                        <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl ${tool.iconBg} flex items-center justify-center text-sm sm:text-base flex-shrink-0`}>
+                          {tool.icon}
+                        </div>
                         <span className="font-medium text-foreground text-xs sm:text-sm leading-tight">{tool.name}</span>
-                        {tool.isPaid && (
-                          <span className="text-[10px] sm:text-xs px-1 sm:px-1.5 py-0.5 rounded border-0 text-white font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-[length:200%_100%] animate-[gradient-shift_3s_ease-in-out_infinite] w-fit">
-                            Active
-                          </span>
-                        )}
                       </div>
                       <a 
                         href={tool.externalUrl} 
@@ -143,6 +138,11 @@ export function DevEssentialsSection() {
                         <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
                       </a>
                     </div>
+                    {tool.isPaid && (
+                      <span className="text-[10px] sm:text-xs px-1 sm:px-1.5 py-0.5 rounded border-0 text-white font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-[length:200%_100%] animate-[gradient-shift_3s_ease-in-out_infinite] w-fit mb-2">
+                        Active
+                      </span>
+                    )}
                     <p className="text-xs sm:text-sm text-muted-foreground line-clamp-3 sm:line-clamp-2 mb-2">
                       {tool.description}
                     </p>
