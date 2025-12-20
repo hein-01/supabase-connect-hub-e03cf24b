@@ -51,7 +51,12 @@ export function DevEssentialsSection() {
       <section className="py-8">
         <div className="container-main">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="section-title">{config?.title || "Today's Hot Deals"}</h2>
+            <div className="flex items-center gap-2">
+              <h2 className="section-title">{config?.title || "Today's Hot Deals"}</h2>
+              <span className="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded border-0 text-white font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-[length:200%_100%] animate-[gradient-shift_3s_ease-in-out_infinite]">
+                Active
+              </span>
+            </div>
             <a href={config?.viewAllLink || '#'} className="text-foreground text-xs sm:text-sm font-medium flex items-center gap-1 hover:underline hover:text-foreground/80">
               {config?.viewAllText || 'View All'} <ArrowRight className="h-4 w-4" />
             </a>
@@ -86,11 +91,6 @@ export function DevEssentialsSection() {
                       )}
                     </div>
                     <div className="flex flex-wrap gap-1 mb-2">
-                      {tool.isActive && (
-                        <span className="text-[10px] sm:text-xs px-1 sm:px-1.5 py-0.5 rounded border-0 text-white font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-[length:200%_100%] animate-[gradient-shift_3s_ease-in-out_infinite]">
-                          Active
-                        </span>
-                      )}
                       <ToolBenefitBadges tool={tool} size="sm" />
                     </div>
                     <p className="text-xs sm:text-sm text-muted-foreground line-clamp-3 sm:line-clamp-2 mb-2">
