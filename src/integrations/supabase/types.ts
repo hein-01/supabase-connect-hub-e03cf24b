@@ -234,17 +234,16 @@ export type Database = {
           description: string
           domain: string | null
           external_url: string | null
-          has_instant_welcome_credits: boolean | null
-          has_new_account_credits: boolean | null
           has_pro_trial_no_card: boolean | null
           has_pro_trial_with_card: boolean | null
           has_recurring_free_credits: boolean | null
           has_student_benefit: boolean | null
+          has_welcome_credits: boolean | null
           icon: string | null
           icon_bg: string | null
           id: string
-          is_active: boolean | null
           is_featured: boolean | null
+          is_hot_deal: boolean | null
           is_paid: boolean | null
           logo: string | null
           name: string
@@ -258,17 +257,16 @@ export type Database = {
           description: string
           domain?: string | null
           external_url?: string | null
-          has_instant_welcome_credits?: boolean | null
-          has_new_account_credits?: boolean | null
           has_pro_trial_no_card?: boolean | null
           has_pro_trial_with_card?: boolean | null
           has_recurring_free_credits?: boolean | null
           has_student_benefit?: boolean | null
+          has_welcome_credits?: boolean | null
           icon?: string | null
           icon_bg?: string | null
           id?: string
-          is_active?: boolean | null
           is_featured?: boolean | null
+          is_hot_deal?: boolean | null
           is_paid?: boolean | null
           logo?: string | null
           name: string
@@ -282,17 +280,16 @@ export type Database = {
           description?: string
           domain?: string | null
           external_url?: string | null
-          has_instant_welcome_credits?: boolean | null
-          has_new_account_credits?: boolean | null
           has_pro_trial_no_card?: boolean | null
           has_pro_trial_with_card?: boolean | null
           has_recurring_free_credits?: boolean | null
           has_student_benefit?: boolean | null
+          has_welcome_credits?: boolean | null
           icon?: string | null
           icon_bg?: string | null
           id?: string
-          is_active?: boolean | null
           is_featured?: boolean | null
+          is_hot_deal?: boolean | null
           is_paid?: boolean | null
           logo?: string | null
           name?: string
