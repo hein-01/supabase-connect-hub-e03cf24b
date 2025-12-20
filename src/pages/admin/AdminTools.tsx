@@ -14,9 +14,9 @@ import type { Tool } from '@/data/types';
 
 const emptyTool: Partial<Tool> = {
   id: '', slug: '', name: '', description: '', logo: '', domain: '', externalUrl: '',
-  icon: '', iconBg: '', isPaid: false, isActive: false, isFeatured: false, categoryIds: [],
-  hasRecurringFreeCredits: false, hasStudentBenefit: false, hasNewAccountCredits: false,
-  hasInstantWelcomeCredits: false, hasProTrialNoCard: false, hasProTrialWithCard: false
+  icon: '', iconBg: '', isPaid: false, isHotDeal: false, isFeatured: false, categoryIds: [],
+  hasRecurringFreeCredits: false, hasStudentBenefit: false,
+  hasWelcomeCredits: false, hasProTrialNoCard: false, hasProTrialWithCard: false
 };
 
 export function AdminTools() {
@@ -156,7 +156,7 @@ export function AdminTools() {
                   <div className="flex gap-2 mt-1">
                     {tool.isPaid && <span className="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800">Paid</span>}
                     {tool.isFeatured && <span className="text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-800">Featured</span>}
-                    {tool.isActive && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-800">Active</span>}
+                    {tool.isHotDeal && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-800">Hot Deal</span>}
                   </div>
                 </div>
               </div>
@@ -271,8 +271,8 @@ export function AdminTools() {
                   <Label>Paid</Label>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Switch checked={editingTool.isActive || false} onCheckedChange={(c) => setEditingTool({ ...editingTool, isActive: c })} />
-                  <Label>Active</Label>
+                  <Switch checked={editingTool.isHotDeal || false} onCheckedChange={(c) => setEditingTool({ ...editingTool, isHotDeal: c })} />
+                  <Label>Hot Deal</Label>
                 </div>
                 <div className="flex items-center gap-2">
                   <Switch checked={editingTool.isFeatured || false} onCheckedChange={(c) => setEditingTool({ ...editingTool, isFeatured: c })} />
@@ -287,12 +287,8 @@ export function AdminTools() {
                   <Label>Student Benefit</Label>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Switch checked={editingTool.hasNewAccountCredits || false} onCheckedChange={(c) => setEditingTool({ ...editingTool, hasNewAccountCredits: c })} />
-                  <Label>New Account Credits</Label>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Switch checked={editingTool.hasInstantWelcomeCredits || false} onCheckedChange={(c) => setEditingTool({ ...editingTool, hasInstantWelcomeCredits: c })} />
-                  <Label>Instant Welcome Credits</Label>
+                  <Switch checked={editingTool.hasWelcomeCredits || false} onCheckedChange={(c) => setEditingTool({ ...editingTool, hasWelcomeCredits: c })} />
+                  <Label>Welcome Credits</Label>
                 </div>
                 <div className="flex items-center gap-2">
                   <Switch checked={editingTool.hasProTrialNoCard || false} onCheckedChange={(c) => setEditingTool({ ...editingTool, hasProTrialNoCard: c })} />

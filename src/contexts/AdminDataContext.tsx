@@ -74,12 +74,11 @@ const dbToTool = (row: any): Tool => ({
   iconBg: row.icon_bg,
   videoUrl: row.video_url,
   isPaid: row.is_paid,
-  isActive: row.is_active,
+  isHotDeal: row.is_hot_deal,
   isFeatured: row.is_featured,
   hasRecurringFreeCredits: row.has_recurring_free_credits,
   hasStudentBenefit: row.has_student_benefit,
-  hasNewAccountCredits: row.has_new_account_credits,
-  hasInstantWelcomeCredits: row.has_instant_welcome_credits,
+  hasWelcomeCredits: row.has_welcome_credits,
   hasProTrialNoCard: row.has_pro_trial_no_card,
   hasProTrialWithCard: row.has_pro_trial_with_card,
   categoryIds: row.category_ids || [],
@@ -297,7 +296,7 @@ export function AdminDataProvider({ children }: { children: ReactNode }) {
         icon_bg: t.iconBg,
         video_url: t.videoUrl,
         is_paid: t.isPaid,
-        is_active: t.isActive,
+        is_hot_deal: t.isHotDeal,
         is_featured: t.isFeatured,
         category_ids: [],
       }));
@@ -345,12 +344,11 @@ export function AdminDataProvider({ children }: { children: ReactNode }) {
       icon_bg: tool.iconBg,
       video_url: tool.videoUrl,
       is_paid: tool.isPaid,
-      is_active: tool.isActive,
+      is_hot_deal: tool.isHotDeal,
       is_featured: tool.isFeatured,
       has_recurring_free_credits: tool.hasRecurringFreeCredits,
       has_student_benefit: tool.hasStudentBenefit,
-      has_new_account_credits: tool.hasNewAccountCredits,
-      has_instant_welcome_credits: tool.hasInstantWelcomeCredits,
+      has_welcome_credits: tool.hasWelcomeCredits,
       has_pro_trial_no_card: tool.hasProTrialNoCard,
       has_pro_trial_with_card: tool.hasProTrialWithCard,
       category_ids: tool.categoryIds,
@@ -370,12 +368,11 @@ export function AdminDataProvider({ children }: { children: ReactNode }) {
     if (updates.iconBg !== undefined) dbUpdates.icon_bg = updates.iconBg;
     if (updates.videoUrl !== undefined) dbUpdates.video_url = updates.videoUrl;
     if (updates.isPaid !== undefined) dbUpdates.is_paid = updates.isPaid;
-    if (updates.isActive !== undefined) dbUpdates.is_active = updates.isActive;
+    if (updates.isHotDeal !== undefined) dbUpdates.is_hot_deal = updates.isHotDeal;
     if (updates.isFeatured !== undefined) dbUpdates.is_featured = updates.isFeatured;
     if (updates.hasRecurringFreeCredits !== undefined) dbUpdates.has_recurring_free_credits = updates.hasRecurringFreeCredits;
     if (updates.hasStudentBenefit !== undefined) dbUpdates.has_student_benefit = updates.hasStudentBenefit;
-    if (updates.hasNewAccountCredits !== undefined) dbUpdates.has_new_account_credits = updates.hasNewAccountCredits;
-    if (updates.hasInstantWelcomeCredits !== undefined) dbUpdates.has_instant_welcome_credits = updates.hasInstantWelcomeCredits;
+    if (updates.hasWelcomeCredits !== undefined) dbUpdates.has_welcome_credits = updates.hasWelcomeCredits;
     if (updates.hasProTrialNoCard !== undefined) dbUpdates.has_pro_trial_no_card = updates.hasProTrialNoCard;
     if (updates.hasProTrialWithCard !== undefined) dbUpdates.has_pro_trial_with_card = updates.hasProTrialWithCard;
     if (updates.categoryIds !== undefined) dbUpdates.category_ids = updates.categoryIds;

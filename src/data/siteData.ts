@@ -147,10 +147,10 @@ export const tools: Tool[] = [
   { id: 'qwen-chat', slug: 'qwen-chat', name: 'Qwen Chat', description: 'Qwen Chat is an AI-powered chat tool built o...', logo: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=200&fit=crop', icon: '⚫', iconBg: 'bg-purple-600 text-white', categoryIds: ['cat-3'], isFeatured: true },
   
   // === Dev Essentials / Hot Deals Tools ===
-  { id: 'qoder', slug: 'qoder', name: 'Qoder', description: 'Qoder is an agent coding platform that seamlessly...', logo: '', icon: '🔴', iconBg: 'bg-gradient-to-br from-orange-500 to-red-500', externalUrl: 'https://qoder.ai', isPaid: true, isActive: true, categoryIds: ['cat-4'], isFeatured: true },
-  { id: 'trae', slug: 'trae', name: 'Trae', description: 'Trae is an AI-driven integrated development environment (IDE)...', logo: '', icon: '🟥', iconBg: 'bg-red-500', externalUrl: 'https://trae.ai', isPaid: true, isActive: true, categoryIds: ['cat-4'], isFeatured: true },
-  { id: 'augment-code', slug: 'augment-code', name: 'Augment Code', description: 'Augment Code is an AI development assistant for...', logo: '', icon: '⚡', iconBg: 'bg-purple-100', externalUrl: 'https://augmentcode.com', isPaid: true, isActive: true, categoryIds: ['cat-4'], isFeatured: true },
-  { id: 'warp', slug: 'warp', name: 'Warp', description: 'Warp is a terminal written in Rust, wh...', logo: '', icon: '🟢', iconBg: 'bg-green-100', externalUrl: 'https://warp.dev', isPaid: true, isActive: true, categoryIds: ['cat-4'], isFeatured: true },
+  { id: 'qoder', slug: 'qoder', name: 'Qoder', description: 'Qoder is an agent coding platform that seamlessly...', logo: '', icon: '🔴', iconBg: 'bg-gradient-to-br from-orange-500 to-red-500', externalUrl: 'https://qoder.ai', isPaid: true, isHotDeal: true, categoryIds: ['cat-4'], isFeatured: true },
+  { id: 'trae', slug: 'trae', name: 'Trae', description: 'Trae is an AI-driven integrated development environment (IDE)...', logo: '', icon: '🟥', iconBg: 'bg-red-500', externalUrl: 'https://trae.ai', isPaid: true, isHotDeal: true, categoryIds: ['cat-4'], isFeatured: true },
+  { id: 'augment-code', slug: 'augment-code', name: 'Augment Code', description: 'Augment Code is an AI development assistant for...', logo: '', icon: '⚡', iconBg: 'bg-purple-100', externalUrl: 'https://augmentcode.com', isPaid: true, isHotDeal: true, categoryIds: ['cat-4'], isFeatured: true },
+  { id: 'warp', slug: 'warp', name: 'Warp', description: 'Warp is a terminal written in Rust, wh...', logo: '', icon: '🟢', iconBg: 'bg-green-100', externalUrl: 'https://warp.dev', isPaid: true, isHotDeal: true, categoryIds: ['cat-4'], isFeatured: true },
 ];
 
 // ==========================================
@@ -214,5 +214,5 @@ export const getToolsByCategory = (categoryId: string): Tool[] =>
 export const getFeaturedTools = (): Tool[] => 
   tools.filter(t => t.isFeatured);
 
-export const getActiveTools = (): Tool[] => 
-  tools.filter(t => t.isActive);
+export const getHotDealTools = (): Tool[] => 
+  tools.filter(t => t.isHotDeal);

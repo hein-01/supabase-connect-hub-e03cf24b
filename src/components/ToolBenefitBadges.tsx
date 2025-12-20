@@ -8,8 +8,7 @@ interface ToolBenefitBadgesProps {
 const benefitConfig = [
   { key: 'hasRecurringFreeCredits', label: 'Free Credits', color: 'bg-green-500/90' },
   { key: 'hasStudentBenefit', label: 'Student', color: 'bg-blue-500/90' },
-  { key: 'hasNewAccountCredits', label: 'New Account', color: 'bg-cyan-500/90' },
-  { key: 'hasInstantWelcomeCredits', label: 'Welcome Credits', color: 'bg-amber-500/90' },
+  { key: 'hasWelcomeCredits', label: 'Welcome Credits', color: 'bg-amber-500/90' },
   { key: 'hasProTrialNoCard', label: 'Free Trial', color: 'bg-emerald-500/90' },
   { key: 'hasProTrialWithCard', label: 'Trial w/ Card', color: 'bg-violet-500/90' },
 ] as const;
