@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 251 85% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 250 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 250 20% 92%;
+    --muted-foreground: 250 15% 40%;
+
+    --accent: 251 85% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 250 20% 88%;
+    --input: 250 20% 88%;
+    --ring: 251 85% 61%;
+
+    --radius: 0.5rem;
+
+    /* Custom AISumo colors */
+    --navy: 250 30% 15%;
+    --navy-light: 250 25% 25%;
+    --teal: 251 70% 50%;
+    --gradient-primary: linear-gradient(135deg, hsl(251 85% 61%), hsl(270 80% 55%));
+    --gradient-logo: linear-gradient(135deg, hsl(251 85% 61%), hsl(270 80% 55%), hsl(230 85% 60%));
+    
+    /* Shadows */
+    --shadow-card: 0 2px 8px -2px hsl(222 47% 11% / 0.08);
+    --shadow-hover: 0 8px 24px -4px hsl(222 47% 11% / 0.12);
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 251 85% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 250 30% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 250 25% 20%;
+    --muted-foreground: 250 15% 60%;
+
+    --accent: 251 85% 61%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 250 25% 22%;
+    --input: 250 25% 22%;
+    --ring: 251 85% 61%;
+    
+    --navy: 250 30% 12%;
+    --navy-light: 250 25% 18%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: var(--gradient-logo);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .nav-link {
+    @apply text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium text-sm;
+  }
+  
+  .section-title {
+    @apply text-base sm:text-xl font-bold text-foreground relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-12 h-0.5 bg-primary rounded-full;
+  }
+  
+  .ranking-badge {
+    @apply w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold;
+  }
+  
+  .ranking-badge-1 {
+    @apply bg-amber-500 text-white;
+  }
+  
+  .ranking-badge-2 {
+    @apply bg-gray-400 text-white;
+  }
+  
+  .ranking-badge-3 {
+    @apply bg-amber-700 text-white;
+  }
+  
+  .ranking-badge-default {
+    @apply bg-muted text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
