@@ -19,8 +19,8 @@ export function DevEssentialsSection() {
   const [selectedIssues, setSelectedIssues] = useState<string[]>([]);
   const [message, setMessage] = useState('');
 
-  // Filter tools that are active (hot deals)
-  const devTools = tools.filter(t => t.isActive);
+  // Filter tools that are hot deals
+  const devTools = tools.filter(t => t.isHotDeal);
 
   const handleOpenModal = (e: React.MouseEvent, tool: Tool) => {
     e.preventDefault();

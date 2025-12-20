@@ -15,12 +15,11 @@ export interface Tool {
   iconBg?: string; // Tailwind bg class
   videoUrl?: string; // For video content
   isPaid?: boolean; // Has paid tier
-  isActive?: boolean; // Currently active/featured
+  isHotDeal?: boolean; // Hot deal flag
   isFeatured?: boolean; // Show in featured sections
   hasRecurringFreeCredits?: boolean; // Has recurring free credits
   hasStudentBenefit?: boolean; // Has student benefit
-  hasNewAccountCredits?: boolean; // Has new account credits
-  hasInstantWelcomeCredits?: boolean; // Has instant welcome credits
+  hasWelcomeCredits?: boolean; // Has welcome credits
   hasProTrialNoCard?: boolean; // Has pro trial without card
   hasProTrialWithCard?: boolean; // Has pro trial with card
   categoryIds: string[]; // Links to categories
